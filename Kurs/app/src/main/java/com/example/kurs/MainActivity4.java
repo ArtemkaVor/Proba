@@ -35,7 +35,6 @@ public class MainActivity4 extends AppCompatActivity {
         String id = mDataBase.getKey();
         String summ = doxodadd.getText().toString();
         Doxod newdoxod = new Doxod(id,summ);
-        mDataBase.push().setValue(newdoxod);
         if (!TextUtils.isEmpty(summ))
         {
             mDataBase.push().setValue(newdoxod);

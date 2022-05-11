@@ -12,9 +12,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity5 extends AppCompatActivity {
-    private EditText rashodadd;
-    private DatabaseReference mDataBase;
-    private String RASHOD_KEY = "Rashod";
+   private EditText rashodadd;
+   private DatabaseReference mDataBase;
+   private String RASHOD_KEY = "Rashod";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +31,18 @@ public class MainActivity5 extends AppCompatActivity {
 
     public void onClickSave(View View)
     {
-        String id = mDataBase.getKey();
+        String id1 = mDataBase.getKey();
         String summr = rashodadd.getText().toString();
-        Rashod newrashod = new Rashod(id,summr);
-        mDataBase.push().setValue(newrashod);
+        Doxod newrashod = new Doxod(id1,summr);
+        if (!TextUtils.isEmpty(summr))
+        {
+            mDataBase.push().setValue(newrashod);
+            Toast.makeText(this, "Вы добавили сумму", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Toast.makeText(this, "Введите сумму", Toast.LENGTH_SHORT).show();
+        }
 
     }
 }

@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="172dp"
         android:layout_marginBottom="252dp"
+        android:onClick="onClickSave"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
