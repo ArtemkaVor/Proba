@@ -12,7 +12,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity5 extends AppCompatActivity {
-   private EditText prashodadd,pcommentradd;
+   private EditText prashodadd,pcommentradd,ptvdater;
    private DatabaseReference mDataBase;
    private String RASHOD_KEY = "Rashod";
 
@@ -27,6 +27,7 @@ public class MainActivity5 extends AppCompatActivity {
     {
         prashodadd = findViewById(R.id.rashodadd);
         pcommentradd = findViewById(R.id.commentradd);
+        ptvdater = findViewById(R.id.tvdater);
         mDataBase = FirebaseDatabase.getInstance().getReference(RASHOD_KEY);
     }
 
@@ -35,7 +36,8 @@ public class MainActivity5 extends AppCompatActivity {
         String id = mDataBase.getKey();
         String summ = prashodadd.getText().toString();
         String comm = pcommentradd.getText().toString();
-        Rashod newrashod = new Rashod(id,summ,comm);
+        String date = ptvdater.getText().toString();
+        Rashod newrashod = new Rashod(id,summ,comm,date);
         if (!TextUtils.isEmpty(summ))
         {
             mDataBase.push().setValue(newrashod);

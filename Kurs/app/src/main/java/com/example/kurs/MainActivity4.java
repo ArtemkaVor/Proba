@@ -13,7 +13,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity4 extends AppCompatActivity {
-    private EditText pdoxodadd,pcommentadd;
+    private EditText pdoxodadd,pcommentadd,ptvdate;
     private DatabaseReference mDataBase;
     private String DOXOD_KEY = "Doxod";
 
@@ -30,6 +30,7 @@ public class MainActivity4 extends AppCompatActivity {
     {
         pdoxodadd = findViewById(R.id.doxodadd);
         pcommentadd = findViewById(R.id.commentadd);
+        ptvdate = findViewById(R.id.tvdate);
         mDataBase = FirebaseDatabase.getInstance().getReference(DOXOD_KEY);
     }
 
@@ -38,7 +39,8 @@ public class MainActivity4 extends AppCompatActivity {
         String id = mDataBase.getKey();
         String summ = pdoxodadd.getText().toString();
         String comm = pcommentadd.getText().toString();
-        Doxod newdoxod = new Doxod(id,summ,comm);
+        String date = ptvdate.getText().toString();
+        Doxod newdoxod = new Doxod(id,summ,comm,date);
         if (!TextUtils.isEmpty(summ))
         {
             mDataBase.push().setValue(newdoxod);

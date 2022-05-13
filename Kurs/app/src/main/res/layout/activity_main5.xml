@@ -15,7 +15,10 @@
         android:layout_marginTop="200dp"
         android:layout_marginEnd="89dp"
         android:ems="10"
+        android:hint="Сумма"
         android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,10 +28,10 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
+        android:layout_marginStart="144dp"
         android:layout_marginBottom="252dp"
         android:onClick="onClickSave"
-        android:text="Button"
+        android:text="Добавить"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -40,8 +43,28 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="90dp"
         android:ems="10"
+        android:hint="Комментарий"
         android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rashodadd" />
+
+    <EditText
+        android:id="@+id/tvdater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="87dp"
+        android:ems="10"
+        android:hint="Дата"
+        android:inputType="date"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentradd" />
 </androidx.constraintlayout.widget.ConstraintLayout>
