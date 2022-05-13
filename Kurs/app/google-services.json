@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "359337661833",
+    "firebase_url": "https://databasek-7b333-default-rtdb.firebaseio.com",
+    "project_id": "databasek-7b333",
+    "storage_bucket": "databasek-7b333.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359337661833:android:195d6c965aec0f44a67d58",
+        "android_client_info": {
+          "package_name": "com.example.kurs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359337661833-i7fd9i8r6phrn28unvgef4ql2pl94v5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhXKUK27jF-yvnkp_uMudhZALRkNOH14E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359337661833-i7fd9i8r6phrn28unvgef4ql2pl94v5c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
