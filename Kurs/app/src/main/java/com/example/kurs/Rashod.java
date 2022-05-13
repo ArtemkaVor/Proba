@@ -1,14 +1,15 @@
 package com.example.kurs;
 
 public class Rashod {
-    public String id1,summr;
+    public String id,summ,comm;
 
     public Rashod()
     {
     }
 
-    public Rashod(String id1, String summr) {
-        this.id1 = id1;
-        this.summr = summr;
+    public Rashod(String id, String summ, String comm) {
+        this.id = id;
+        this.summ = summ;
+        this.comm = comm;
     }
 }

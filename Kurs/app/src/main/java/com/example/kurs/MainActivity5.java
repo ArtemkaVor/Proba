@@ -12,7 +12,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity5 extends AppCompatActivity {
-   private EditText rashodadd;
+   private EditText prashodadd,pcommentradd;
    private DatabaseReference mDataBase;
    private String RASHOD_KEY = "Rashod";
 
@@ -25,16 +25,18 @@ public class MainActivity5 extends AppCompatActivity {
 
     public void init()
     {
-        rashodadd = findViewById(R.id.rashodadd);
+        prashodadd = findViewById(R.id.rashodadd);
+        pcommentradd = findViewById(R.id.commentradd);
         mDataBase = FirebaseDatabase.getInstance().getReference(RASHOD_KEY);
     }
 
     public void onClickSave(View View)
     {
-        String id1 = mDataBase.getKey();
-        String summr = rashodadd.getText().toString();
-        Doxod newrashod = new Doxod(id1,summr);
-        if (!TextUtils.isEmpty(summr))
+        String id = mDataBase.getKey();
+        String summ = prashodadd.getText().toString();
+        String comm = pcommentradd.getText().toString();
+        Rashod newrashod = new Rashod(id,summ,comm);
+        if (!TextUtils.isEmpty(summ))
         {
             mDataBase.push().setValue(newrashod);
             Toast.makeText(this, "Вы добавили сумму", Toast.LENGTH_SHORT).show();

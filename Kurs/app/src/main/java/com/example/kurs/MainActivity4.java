@@ -13,28 +13,32 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity4 extends AppCompatActivity {
-    private EditText doxodadd;
+    private EditText pdoxodadd,pcommentadd;
     private DatabaseReference mDataBase;
     private String DOXOD_KEY = "Doxod";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
         init();
+
     }
 
     public void init()
     {
-        doxodadd = findViewById(R.id.doxodadd);
+        pdoxodadd = findViewById(R.id.doxodadd);
+        pcommentadd = findViewById(R.id.commentadd);
         mDataBase = FirebaseDatabase.getInstance().getReference(DOXOD_KEY);
     }
 
     public void onClickSave(View View)
     {
         String id = mDataBase.getKey();
-        String summ = doxodadd.getText().toString();
-        Doxod newdoxod = new Doxod(id,summ);
+        String summ = pdoxodadd.getText().toString();
+        String comm = pcommentadd.getText().toString();
+        Doxod newdoxod = new Doxod(id,summ,comm);
         if (!TextUtils.isEmpty(summ))
         {
             mDataBase.push().setValue(newdoxod);

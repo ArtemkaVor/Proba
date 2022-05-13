@@ -29,6 +29,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
     private DatabaseReference mDataBase;
     private String DOXOD_KEY = "Doxod";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +47,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,listData);
         listView.setAdapter(adapter);
         mDataBase = FirebaseDatabase.getInstance().getReference(DOXOD_KEY);
+
     }
     private void getDataFromDB()
     {
@@ -63,6 +65,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 adapter.notifyDataSetChanged();
 
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
