@@ -25,7 +25,7 @@ public class MainActivity3 extends AppCompatActivity implements View.OnClickList
     private ListView listView;
     private ArrayAdapter<String> adapter;
     private List<String> listData;
-    private List<Doxod> listTemp;
+    private List<Rashod> listTemp;
     private DatabaseReference mDataBase;
     private String RASHOD_KEY = "Rashod";
     public static double summrashod = 0;
@@ -62,11 +62,11 @@ public class MainActivity3 extends AppCompatActivity implements View.OnClickList
                 if(listTemp.size() > 0) listTemp.clear();
                 for(DataSnapshot ds : snapshot.getChildren())
                 {
-                    Doxod doxod = ds.getValue(Doxod.class);
-                    assert doxod != null;
-                    listData.add(doxod.summ);
-                    listTemp.add(doxod);
-                    a = Double.parseDouble(doxod.summ);
+                    Rashod rashod = ds.getValue(Rashod.class);
+                    assert rashod != null;
+                    listData.add(rashod.summ);
+                    listTemp.add(rashod);
+                    a = Double.parseDouble(rashod.summ);
                     summrashod = summrashod + a;
                 }
                 adapter.notifyDataSetChanged();
@@ -87,11 +87,11 @@ public class MainActivity3 extends AppCompatActivity implements View.OnClickList
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Doxod doxod = listTemp.get(position);
+                Rashod rashod = listTemp.get(position);
                 Intent i = new Intent(MainActivity3.this, ShowActivityRashod.class);
-                i.putExtra("summr_show",doxod.summ);
-                i.putExtra("commr_show",doxod.comm);
-                i.putExtra("dater_show",doxod.date);
+                i.putExtra("summr_show",rashod.summ);
+                i.putExtra("commr_show",rashod.comm);
+                i.putExtra("dater_show",rashod.date);
                 startActivity(i);
 
             }

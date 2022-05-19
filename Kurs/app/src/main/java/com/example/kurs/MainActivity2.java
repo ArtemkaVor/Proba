@@ -45,6 +45,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         init();
         getDataFromDB();
         setOnClickItem();
+        // tr();
+
 
 
 
@@ -77,7 +79,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                     summdoxod = summdoxod + a;
                 }
                 adapter.notifyDataSetChanged();
-                String d = Double.toString(summdoxod);
+                d = Double.toString(summdoxod);
                 txtsummdoxod = findViewById(R.id.txtsummdoxod);
                 txtsummdoxod.setText(d);
 
