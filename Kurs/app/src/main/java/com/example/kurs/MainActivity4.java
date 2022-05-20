@@ -2,17 +2,19 @@ package com.example.kurs;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.inputmethodservice.Keyboard;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class MainActivity4 extends AppCompatActivity {
+public class MainActivity4 extends AppCompatActivity implements View.OnClickListener {
     private EditText pdoxodadd,pcommentadd,ptvdate;
     private DatabaseReference mDataBase;
     private String DOXOD_KEY = "Doxod";
@@ -24,8 +26,19 @@ public class MainActivity4 extends AppCompatActivity {
         setContentView(R.layout.activity_main4);
         init();
 
+
     }
 
+    @Override
+    public void onClick(View v) {
+        Intent intent;
+        switch (v.getId()) {
+            case R.id.backdoxod:
+                intent = new Intent(MainActivity4.this, MainActivity.class);
+                startActivity(intent);
+
+        }
+    }
     public void init()
     {
         pdoxodadd = findViewById(R.id.doxodadd);
@@ -33,6 +46,8 @@ public class MainActivity4 extends AppCompatActivity {
         ptvdate = findViewById(R.id.tvdate);
         mDataBase = FirebaseDatabase.getInstance().getReference(DOXOD_KEY);
     }
+
+
 
     public void onClickSave(View View) {
         String id = mDataBase.getKey();
@@ -49,4 +64,5 @@ public class MainActivity4 extends AppCompatActivity {
         }
 
     }
+
 }

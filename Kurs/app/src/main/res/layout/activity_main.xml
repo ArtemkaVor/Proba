@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:layout_marginEnd="188dp"
+        android:layout_marginEnd="172dp"
         android:elevation="10dp"
         android:text="Итог"
         android:textColor="#FFFFFF"
@@ -82,7 +82,7 @@
         android:layout_height="138dp"
         android:layout_marginStart="1dp"
         android:layout_marginBottom="1dp"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -92,7 +92,7 @@
         android:layout_height="137dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -100,8 +100,8 @@
         android:id="@+id/outputD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="428dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="472dp"
         android:text="TextView"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -111,8 +111,8 @@
         android:id="@+id/outputR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="340dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="384dp"
         android:text="TextView"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"

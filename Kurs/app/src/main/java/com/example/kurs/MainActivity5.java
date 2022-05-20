@@ -2,16 +2,18 @@ package com.example.kurs;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class MainActivity5 extends AppCompatActivity {
+public class MainActivity5 extends AppCompatActivity implements View.OnClickListener  {
    private EditText prashodadd,pcommentradd,ptvdater;
    private DatabaseReference mDataBase;
    private String RASHOD_KEY = "Rashod";
@@ -21,6 +23,16 @@ public class MainActivity5 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main5);
         init();
+    }
+    @Override
+    public void onClick(View v) {
+        Intent intent;
+        switch (v.getId()) {
+            case R.id.backrashod:
+                intent = new Intent(MainActivity5.this, MainActivity3.class);
+                startActivity(intent);
+
+        }
     }
 
     public void init()
@@ -49,4 +61,5 @@ public class MainActivity5 extends AppCompatActivity {
         }
 
     }
+
 }

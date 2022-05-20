@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mDataBase.addValueEventListener(vlistener);
     }
 
-    public String getDataFromDB1()
+    public void getDataFromDB1()
     {
         ValueEventListener vlistener = new ValueEventListener() {
             @Override
@@ -150,6 +150,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 rashodreturn.setText(fr);
 
 
+
             }
 
 
@@ -159,7 +160,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         };
         mDataBase1.addValueEventListener(vlistener);
-        return r1;
+
     }
     public static void finalK(String []args)
     {
