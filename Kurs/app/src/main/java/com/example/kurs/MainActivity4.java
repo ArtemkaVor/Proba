@@ -43,7 +43,8 @@ public class MainActivity4 extends AppCompatActivity {
         if (!TextUtils.isEmpty(summ)) {
             mDataBase.push().setValue(newdoxod);
             Toast.makeText(this, "Вы добавили сумму", Toast.LENGTH_SHORT).show();
-        } else {
+        }
+        else {
             Toast.makeText(this, "Введите сумму", Toast.LENGTH_SHORT).show();
         }
 

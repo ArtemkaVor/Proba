@@ -28,7 +28,7 @@ public class MainActivity3 extends AppCompatActivity implements View.OnClickList
     private List<Rashod> listTemp;
     private DatabaseReference mDataBase;
     private String RASHOD_KEY = "Rashod";
-    public static double summrashod = 0;
+    public  double summrashod = 0;
     private double a;
     private TextView txtsummrashod;
     public String r;
@@ -70,9 +70,10 @@ public class MainActivity3 extends AppCompatActivity implements View.OnClickList
                     summrashod = summrashod + a;
                 }
                 adapter.notifyDataSetChanged();
-                String r = Double.toString(summrashod);
+                r = Double.toString(summrashod);
                 txtsummrashod = findViewById(R.id.txtsummrashod);
                 txtsummrashod.setText(r);
+
             }
 
             @Override

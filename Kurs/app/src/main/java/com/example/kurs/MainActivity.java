@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private List<String> listData1;
     private DatabaseReference mDataBase1;
     private String RASHOD_KEY = "Rashod";
-    public static double summrashod = 0;
+    public  double summrashod = 0;
     private double a1;
     private TextView txtsummrashod;
     public String r1;
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         listData1 = new ArrayList<>();
         adapter1 = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,listData1);
         listView1.setAdapter(adapter1);
-        mDataBase = FirebaseDatabase.getInstance().getReference(RASHOD_KEY);
+        mDataBase1 = FirebaseDatabase.getInstance().getReference(RASHOD_KEY);
 
     }
 
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             }
         };
-        mDataBase.addValueEventListener(vlistener);
+        mDataBase1.addValueEventListener(vlistener);
     }
     public void finalK()
     {
