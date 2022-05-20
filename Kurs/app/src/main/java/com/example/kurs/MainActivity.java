@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private double a1;
     private TextView txtsummrashod;
     public String r1;
+    public TextView rashodreturn;
 
 
 
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getDataFromDB();
         init1();
         getDataFromDB1();
-        finalK();
+        //finalK();
 
 
 
@@ -112,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 txtsummdoxod.setText(d);
 
 
+
             }
 
             @Override
@@ -123,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mDataBase.addValueEventListener(vlistener);
     }
 
-    public void getDataFromDB1()
+    public String getDataFromDB1()
     {
         ValueEventListener vlistener = new ValueEventListener() {
             @Override
@@ -142,7 +144,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 r1 = Double.toString(summrashod);
                 txtsummrashod = findViewById(R.id.outputR);
                 txtsummrashod.setText(r1);
+                Double prov = summdoxod - summrashod;
+                String fr = Double.toString(prov);
+                rashodreturn = findViewById(R.id.obsumm);
+                rashodreturn.setText(fr);
+
+
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -150,11 +159,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         };
         mDataBase1.addValueEventListener(vlistener);
+        return r1;
     }
-    public void finalK()
+    public static void finalK(String []args)
     {
-
-
 
 
     }
