@@ -97,11 +97,11 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/outputD"
+        android:id="@+id/outputR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="472dp"
+        android:layout_marginBottom="340dp"
         android:text="Сумма"
         android:textColor="#FFFFFF"
         android:textSize="24dp"
@@ -109,11 +109,11 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/outputR"
+        android:id="@+id/outputD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="384dp"
+        android:layout_marginBottom="428dp"
         android:text="Сумма"
         android:textColor="#FFFFFF"
         android:textSize="24dp"

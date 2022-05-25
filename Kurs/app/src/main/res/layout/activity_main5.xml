@@ -12,7 +12,7 @@
         android:layout_width="214dp"
         android:layout_height="49dp"
         android:layout_marginStart="112dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="196dp"
         android:layout_marginEnd="89dp"
         android:ems="10"
         android:hint="Сумма"
@@ -20,7 +20,7 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.909"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,13 +30,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
         android:layout_marginEnd="150dp"
-        android:layout_marginBottom="212dp"
+        android:layout_marginBottom="216dp"
         android:backgroundTint="#FF0000"
         android:onClick="onClickSave"
         android:text="Добавить"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -44,7 +44,7 @@
         android:layout_width="214dp"
         android:layout_height="49dp"
         android:layout_marginStart="111dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="90dp"
         android:ems="10"
         android:hint="Комментарий"
@@ -52,6 +52,7 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.863"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rashodadd" />
 
