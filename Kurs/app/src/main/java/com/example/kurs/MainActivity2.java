@@ -51,6 +51,9 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
 
 
     }
+    //Присваивание переменной значения ListView в который будут выводиться значения
+    //Присваивание переменным ArrayList(аналог массива)
+    //Создаём адаптер нужный для вывода элементов
     private void init()
     {
         listView = findViewById(R.id.ListViewDoxod);
@@ -61,6 +64,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         mDataBase = FirebaseDatabase.getInstance().getReference(DOXOD_KEY);
 
     }
+    //Создаём цикл добавляющий все данные в список и считающий сумму
+    //Выводим всё на экран
     public void getDataFromDB()
     {
         ValueEventListener vlistener = new ValueEventListener() {
@@ -95,7 +100,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         mDataBase.addValueEventListener(vlistener);
     }
 
-
+    // Демонстрации информации полученный из цикла в OnDataChange и показ информации на новом активити
     private void setOnClickItem()
     {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

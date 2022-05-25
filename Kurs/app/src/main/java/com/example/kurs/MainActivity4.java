@@ -34,12 +34,12 @@ public class MainActivity4 extends AppCompatActivity implements View.OnClickList
         Intent intent;
         switch (v.getId()) {
             case R.id.backdoxod:
-                intent = new Intent(MainActivity4.this, MainActivity.class);
+                intent = new Intent(MainActivity4.this, MainActivity2.class);
                 startActivity(intent);
 
         }
     }
-    public void init()
+    public void init() // Присваивание переменных к EdText и базы
     {
         pdoxodadd = findViewById(R.id.doxodadd);
         pcommentadd = findViewById(R.id.commentadd);
@@ -48,8 +48,12 @@ public class MainActivity4 extends AppCompatActivity implements View.OnClickList
     }
 
 
-
-    public void onClickSave(View View) {
+    // Получения текста из EdText, присваивание его к переменным класса.
+    //Создание цикла при условии что мы не оставили значение суммы пустым происходит выгрузка данных.
+    //Вывод уведомления об успешной выгрузке данных в базу и переход на предыдущую страницу.
+    //Иначе вывод сообщения о незаполненной сумме в EdText присвоенный к summ
+    public void onClickSave(View View)
+    {
         String id = mDataBase.getKey();
         String summ = pdoxodadd.getText().toString();
         String comm = pcommentadd.getText().toString();
@@ -58,10 +62,14 @@ public class MainActivity4 extends AppCompatActivity implements View.OnClickList
         if (!TextUtils.isEmpty(summ)) {
             mDataBase.push().setValue(newdoxod);
             Toast.makeText(this, "Вы добавили сумму", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(MainActivity4.this, MainActivity2.class);
+            startActivity(i);
+
         }
         else {
             Toast.makeText(this, "Введите сумму", Toast.LENGTH_SHORT).show();
         }
+
 
     }
 

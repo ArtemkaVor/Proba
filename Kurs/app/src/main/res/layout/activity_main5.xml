@@ -9,8 +9,8 @@
 
     <EditText
         android:id="@+id/rashodadd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="214dp"
+        android:layout_height="49dp"
         android:layout_marginStart="112dp"
         android:layout_marginTop="200dp"
         android:layout_marginEnd="89dp"
@@ -28,19 +28,23 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginBottom="252dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="212dp"
+        android:backgroundTint="#FF0000"
         android:onClick="onClickSave"
         android:text="Добавить"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/commentradd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="214dp"
+        android:layout_height="49dp"
         android:layout_marginStart="111dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="90dp"
         android:ems="10"
         android:hint="Комментарий"
@@ -53,10 +57,10 @@
 
     <EditText
         android:id="@+id/tvdater"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="214dp"
+        android:layout_height="49dp"
         android:layout_marginStart="115dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="87dp"
         android:ems="10"
         android:hint="Дата"
@@ -70,12 +74,22 @@
 
     <ImageView
         android:id="@+id/backrashod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="46dp"
+        android:layout_height="54dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:onClick="onClick"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_media_rew" />
+        app:srcCompat="@drawable/bbutton1" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="144dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="112dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/outcome" />
 </androidx.constraintlayout.widget.ConstraintLayout>

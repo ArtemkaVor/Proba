@@ -54,6 +54,8 @@ public class MainActivity5 extends AppCompatActivity implements View.OnClickList
         {
             mDataBase.push().setValue(newrashod);
             Toast.makeText(this, "Вы добавили сумму", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(MainActivity5.this, MainActivity3.class);
+            startActivity(i);
         }
         else
         {

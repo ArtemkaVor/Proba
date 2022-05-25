@@ -11,8 +11,8 @@
         android:id="@+id/menugo1"
         android:layout_width="69dp"
         android:layout_height="60dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:onClick="onClick"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,23 +20,24 @@
 
     <ImageView
         android:id="@+id/addDoxod1"
-        android:layout_width="114dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="304dp"
-        android:layout_marginBottom="36dp"
+        android:layout_width="71dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginBottom="16dp"
         android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:srcCompat="@drawable/plus" />
 
     <TextView
         android:id="@+id/txtsummrashod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
+        android:layout_width="100dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="12dp"
         android:layout_marginBottom="612dp"
         android:text="Сумма"
         android:textColor="#FFFFFF"
+        android:textSize="23dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -44,10 +45,11 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginBottom="548dp"
-        android:text="Итого"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="612dp"
+        android:text="Сумма ваших расходов:"
         android:textColor="#FFFFFF"
+        android:textSize="23dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
